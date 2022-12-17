@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import createAuthStore from '@/Store/authStore'
 
 import dynamic from 'next/dynamic'
+import createPostStore from '@/Store/postStore';
 
 const ReactLoader = dynamic(() => import('@/Components/loader/ReactLoader'));
 
@@ -12,8 +13,15 @@ function MyApp({ Component, pageProps }) {
 
   const successLogin = createAuthStore((state) => state.successLogin);
   const successLogout = createAuthStore((state) => state.successLogout);
+  const fetchPosts = createPostStore((state) => state.fetchPosts);
 
   const [loading,setLoading] = useState(false)
+
+  const param = {
+    language: '',
+    from:null,
+    to:null
+  }
 
 
 
@@ -42,6 +50,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     verifyToken()
+    fetchPosts(param)
   }, [])
 
 

@@ -21,7 +21,7 @@ export default function Home() {
         <Layouts pageTitle={pageTitle}>
           <div className='flex lg:flex-row flex-col lg:py-4 p-2 pr-3 w-full'>
 
-            <div className='lg:w-1/5 w-full px-2 text-center '>
+            <div className='lg:w-1/5 w-full px-2 '>
               <Sidenav />
             </div>
 

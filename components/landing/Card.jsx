@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import Link from 'next/link';
 import CardTextItem from './CardTextItem';
@@ -37,9 +38,9 @@ const Card = ({
 
           <div className='px-4 py-1'>
             <div className='pt-0.5'>
-              <p className='font-normal font-sm text-sky-600 border-b border-slate-100'>
+              <div className='font-normal font-sm text-sky-600 border-b border-slate-100'>
                 Author {author}
-              </p>
+              </div>
             </div>
             <div className='pt-0'>
               <h4 className='font-semibold text-lg text-gray-600 hover:text-sky-600 border-b border-slate-100 tracking-tight'>
@@ -47,9 +48,9 @@ const Card = ({
               </h4>
             </div>
             <div className='pt-0'>
-              <p>
+              <div>
                 {description}
-              </p>
+              </div>
             </div>
 
           </div>
