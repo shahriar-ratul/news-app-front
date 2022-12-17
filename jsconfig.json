@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "target": "ES2020",
+        "jsx": "preserve",
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/Layout/*": ["layout/*"],
+            "@/Components/*": ["components/*"],
+            "@/Styles/*": ["styles/*"],
+            "@/Store/*": ["store/*"],
+        },
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
